@@ -41,4 +41,34 @@ public class Schedule {
     public void setScheduledTime(String scheduledTime) {
         this.scheduledTime = scheduledTime;
     }
+
+    public Client getClient() {
+      return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Company getCompany() {
+      return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public Employee getEmployee() {
+      return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public boolean isValid() {
+      return !(
+          this.scheduledTime == ""
+      );
+    }
 }

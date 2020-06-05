@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Client Register</title>
+</head>
+<body>
+    <form action="#" th:action="@{/client/register}" th:object="${client}" method="POST">
+        <p>Name: <input type="text" th:field="*{name}" /></p>
+        <p>Phone: <input type="text" th:field="*{phone}" /></p>
+        <p>Birth: <input type="number" th:field="*{birth}" /></p>
+        <p><input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

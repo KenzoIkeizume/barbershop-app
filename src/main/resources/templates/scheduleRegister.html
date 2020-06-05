@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Schedule Register</title>
+</head>
+<body>
+    <form action="#" th:action="@{/schedule/register}" th:object="${schedule}" method="POST">
+        <p>Scheduled Time: <input type="text" th:field="*{scheduledTime}" /></p>
+        <select th:field="${schedule.client}">
+          <option value="">Select Client</option>
+          <option th:each="client : ${clients}" 
+                  th:value="${client.id}" 
+                  th:text="${client.name}">
+          </option>
+        </select>
+        <select th:field="${schedule.employee}">
+          <option value="">Select Client</option>
+          <option th:each="employee : ${employees}" 
+                  th:value="${employee.id}" 
+                  th:text="${employee.name}">
+          </option>
+        </select>
+        <select th:field="${schedule.company}">
+          <option value="">Select Client</option>
+          <option th:each="company : ${companies}" 
+                  th:value="${company.id}" 
+                  th:text="${company.name}">
+          </option>
+        </select>
+        <p><input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

@@ -78,8 +78,7 @@ public class Client {
         return !(
             this.name == "" || 
             this.phone == "" || 
-            this.birth < 1900 || 
-            this.employees.size() <= 0
+            this.birth < 1900
         );
     }
 }

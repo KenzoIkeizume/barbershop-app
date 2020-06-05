@@ -70,8 +70,7 @@ public class Company {
         return !(
             this.name == "" || 
             this.founder == "" || 
-            this.specialty == "" || 
-            this.employees.size() <= 0
+            this.specialty == ""
         );
     }
 }

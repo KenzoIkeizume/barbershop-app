@@ -79,6 +79,10 @@ public class Employee {
         return company;
     }
 
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
     public List<Schedule> getSchedules() {
       return schedules;
     }
@@ -87,9 +91,7 @@ public class Employee {
         return !(
             this.name == "" || 
             this.occupation == "" || 
-            this.salary <= 0 || 
-            this.clients.size() <= 0 || 
-            !this.company.isValid()
+            this.salary <= 0
         );
     }
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Company Register</title>
+</head>
+<body>
+    <form action="#" th:action="@{/employee/register}" th:object="${employee}" method="POST">
+        <p>Name: <input type="text" th:field="*{name}" /></p>
+        <p>Occupation: <input type="text" th:field="*{occupation}" /></p>
+        <p>salary: <input type="number" th:field="*{salary}" /></p>
+        <select th:field="${employee.company}">
+          <option value="">Select Company</option>
+          <option th:each="company : ${companies}" 
+                  th:value="${company.id}" 
+                  th:text="${company.name}">
+          </option>
+        </select>
+        <p><input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

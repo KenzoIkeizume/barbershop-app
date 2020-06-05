@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Company Register</title>
+</head>
+<body>
+    <form action="#" th:action="@{/company/register}" th:object="${company}" method="POST">
+        <p>Name: <input type="text" th:field="*{name}" /></p>
+        <p>Founder: <input type="text" th:field="*{founder}" /></p>
+        <p>specialty: <input type="text" th:field="*{specialty}" /></p>
+        <p><input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
