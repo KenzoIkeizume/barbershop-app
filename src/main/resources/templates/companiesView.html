@@ -25,6 +25,7 @@
             <td th:text="${company?.founder}" />
             <td th:text="${company?.specialty}" />
             <td><a th:href="@{/company/{id}(id=${company?.id})}">link to company</a></td>
+            <td><a th:href="@{/company/delete/{id}(id=${company.id})}">delete company</a></td>
         </tr>
     </table>
 

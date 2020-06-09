@@ -39,4 +39,9 @@ public class ScheduleService {
 
         return schedule;
     }
+
+    public void deleteSchedule(int id)
+    {
+        this.scheduleRepository.deleteById(id);
+    }
 }

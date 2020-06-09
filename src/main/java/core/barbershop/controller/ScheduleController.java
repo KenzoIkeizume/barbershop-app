@@ -78,4 +78,13 @@ public class ScheduleController {
         m.addObject("schedule", schedule);
         return m;
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteSchedule(
+        @PathVariable("id") Integer id
+    ){
+        this.scheduleService.deleteSchedule(id);
+
+        return "redirect:/schedule/list";
+    }
 }

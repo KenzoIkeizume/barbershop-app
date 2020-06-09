@@ -39,4 +39,9 @@ public class EmployeeService {
 
         return employee;
     }
+
+    public void deleteEmployee(int id)
+    {
+        this.employeeRepository.deleteById(id);
+    }
 }

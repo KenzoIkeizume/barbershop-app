@@ -57,4 +57,13 @@ public class ClientController {
         m.addObject("client", client);
         return m;
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteClient(
+        @PathVariable("id") Integer id
+    ){
+        this.clientService.deleteClient(id);
+
+        return "redirect:/client/list";
+    }
 }

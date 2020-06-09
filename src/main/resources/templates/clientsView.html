@@ -25,6 +25,7 @@
             <td th:text="${client?.phone}" />
             <td th:text="${client?.birth}" />
             <td><a th:href="@{/client/{id}(id=${client?.id})}">link to client</a></td>
+            <td><a th:href="@{/client/delete/{id}(id=${client.id})}">delete client</a></td>
         </tr>
     </table>
 

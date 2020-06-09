@@ -64,4 +64,13 @@ public class EmployeeController {
         m.addObject("employee", employee);
         return m;
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteEmployee(
+        @PathVariable("id") Integer id
+    ){
+        this.employeeService.deleteEmployee(id);
+
+        return "redirect:/employee/list";
+    }
 }

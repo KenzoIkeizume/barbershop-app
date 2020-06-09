@@ -30,6 +30,7 @@
             <td><a th:href="@{/company/{id}(id=${schedule?.company?.id})}">link to company</a></td>
             <td><a th:href="@{/employee/{id}(id=${schedule?.employee?.id})}">link to employee</a></td>
             <td><a th:href="@{/schedule/{id}(id=${schedule?.id})}">link to schedule</a></td>
+            <td><a th:href="@{/schedule/delete/{id}(id=${schedule.id})}">delete schedule</a></td>
         </tr>
     </table>
 

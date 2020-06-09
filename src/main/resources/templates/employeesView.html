@@ -28,6 +28,7 @@
             <td th:text="${employee?.company?.name}" />
             <td><a th:href="@{/company/{id}(id=${employee?.company?.id})}">link to company</a></td>
             <td><a th:href="@{/employee/{id}(id=${employee?.id})}">link to employee</a></td>
+            <td><a th:href="@{/employee/delete/{id}(id=${employee.id})}">delete employee</a></td>
         </tr>
     </table>
 

@@ -57,4 +57,13 @@ public class CompanyController {
         m.addObject("company", company);
         return m;
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteCompany(
+        @PathVariable("id") Integer id
+    ){
+        this.companyService.deleteCompany(id);
+
+        return "redirect:/company/list";
+    }
 }
