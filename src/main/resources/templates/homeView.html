@@ -7,5 +7,39 @@
 </head>
 <body>
     <h1>Home</h1>
+    <table>
+      <tr>
+          <td>
+              <a th:href="@{/client/list}">list of clients</a>
+          </td>
+          <td>
+            <a th:href="@{/client/register/form}">register client</a>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <a th:href="@{/company/list}">list of companies</a>
+          </td>
+          <td>
+            <a th:href="@{/company/register/form}">register company</a>
+          </td>          
+      </tr>
+      <tr>
+          <td>
+              <a th:href="@{/employee/list}">list of employees</a>
+          </td>
+          <td>
+            <a th:href="@{/employee/register/form}">register employee</a>
+          </td>
+      </tr>
+      <tr>
+        <td>
+            <a th:href="@{/schedule/list}">list of schedules</a>
+        </td>
+        <td>
+          <a th:href="@{/schedule/register/form}">register schedule</a>
+        </td>
+    </tr>
+  </table>
 </body>
 </html>

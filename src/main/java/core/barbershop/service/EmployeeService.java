@@ -32,4 +32,11 @@ public class EmployeeService {
 
       return employees;
     }
+
+    public Employee getEmployee(int id)
+    {
+        Employee employee = this.employeeRepository.getOne(id);
+
+        return employee;
+    }
 }

@@ -32,4 +32,11 @@ public class CompanyService {
 
       return companies;
     }
+
+    public Company getCompany(int id)
+    {
+        Company company = this.companyRepository.getOne(id);
+
+        return company;
+    }
 }

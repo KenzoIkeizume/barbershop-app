@@ -29,7 +29,14 @@ public class ScheduleService {
 
     public List<Schedule> findAllSchedule() {
       List<Schedule> schedules = this.scheduleRepository.findAll();
-
+      
       return schedules;
+    }
+
+    public Schedule getSchedule(int id)
+    {
+        Schedule schedule = this.scheduleRepository.getOne(id);
+
+        return schedule;
     }
 }

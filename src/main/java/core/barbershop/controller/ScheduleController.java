@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -56,5 +57,25 @@ public class ScheduleController {
         this.scheduleService.postSchedule(schedule);
        
         return "redirect:/schedule/register/form";
+    }
+
+    @GetMapping("/list")
+    public ModelAndView scheduleList(){
+        List<Schedule> schedules = this.scheduleService.findAllSchedule();
+
+        ModelAndView m = new ModelAndView("schedulesView");
+        m.addObject("schedules", schedules);
+        return m;
+    }
+
+    @GetMapping("/{id}")
+    public ModelAndView getSchedule(
+        @PathVariable("id") Integer id
+    ){
+        Schedule schedule = this.scheduleService.getSchedule(id);
+
+        ModelAndView m = new ModelAndView("scheduleView");
+        m.addObject("schedule", schedule);
+        return m;
     }
 }

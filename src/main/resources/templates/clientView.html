@@ -11,19 +11,19 @@
     </style>
 </head>
 <body>
-    <h1>Company</h1>
+    <h1>Client</h1>
     <table>
         <tr>
             <td>id</td>
             <td>name</td>
-            <td>founder</td>
-            <td>specialty</td>
+            <td>phone</td>
+            <td>birth</td>
         </tr>
         <tr>
-            <td th:text="${company?.id}" />
-            <td th:text="${company?.name}" />
-            <td th:text="${company?.founder}" />
-            <td th:text="${company?.specialty}" />
+            <td th:text="${client?.id}" />
+            <td th:text="${client?.name}" />
+            <td th:text="${client?.phone}" />
+            <td th:text="${client?.birth}" />
         </tr>
     </table>
 

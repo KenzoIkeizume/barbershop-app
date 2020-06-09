@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedules</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Schedules</h1>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>time</td>
+            <td>client</td>
+            <td>company</td>
+            <td>employee</td>
+        </tr>
+        <tr th:each="schedule: ${schedules}">
+            <td th:text="${schedule?.id}" />
+            <td th:text="${schedule?.scheduledTime}" />
+            <td th:text="${schedule?.client?.name}" />
+            <td th:text="${schedule?.company?.name}" />
+            <td th:text="${schedule?.employee?.name}" />
+            <td><a th:href="@{/client/{id}(id=${schedule?.client?.id})}">link to client</a></td>
+            <td><a th:href="@{/company/{id}(id=${schedule?.company?.id})}">link to company</a></td>
+            <td><a th:href="@{/employee/{id}(id=${schedule?.employee?.id})}">link to employee</a></td>
+            <td><a th:href="@{/schedule/{id}(id=${schedule?.id})}">link to schedule</a></td>
+        </tr>
+    </table>
+
+    <br />
+    <a th:href="@{/}">home</a>
+</body>
+</html>

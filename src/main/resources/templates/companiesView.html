@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company</title>
+    <title>Companies</title>
     <style>
         table, th, td {
           border: 1px solid black;
@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <h1>Company</h1>
+    <h1>List of Companies</h1>
     <table>
         <tr>
             <td>id</td>
@@ -19,11 +19,12 @@
             <td>founder</td>
             <td>specialty</td>
         </tr>
-        <tr>
+        <tr th:each="company: ${companies}">
             <td th:text="${company?.id}" />
             <td th:text="${company?.name}" />
             <td th:text="${company?.founder}" />
             <td th:text="${company?.specialty}" />
+            <td><a th:href="@{/company/{id}(id=${company?.id})}">link to company</a></td>
         </tr>
     </table>
 

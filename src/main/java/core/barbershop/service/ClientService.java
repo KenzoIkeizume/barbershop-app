@@ -32,4 +32,11 @@ public class ClientService {
 
       return clients;
     }
+
+    public Client getClient(int id)
+    {
+        Client client = this.clientRepository.getOne(id);
+
+        return client;
+    }
 }
